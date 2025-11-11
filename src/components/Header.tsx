@@ -1,32 +1,31 @@
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            Estaterune
-          </div>
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-neon-purple/30 bg-cyber-darker/90 backdrop-blur-xl">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <img src={logo} alt="Estaterune" className="h-12 w-auto" />
         </div>
         
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">
+          <a href="#about" className="text-foreground/70 hover:text-neon-pink transition-colors text-sm uppercase tracking-wider font-light">
             About
           </a>
-          <a href="#protocol" className="text-foreground/80 hover:text-primary transition-colors">
-            Protocol
+          <a href="#technology" className="text-foreground/70 hover:text-neon-cyan transition-colors text-sm uppercase tracking-wider font-light">
+            Technology
           </a>
-          <a href="#features" className="text-foreground/80 hover:text-primary transition-colors">
-            Features
+          <a href="#tokenomics" className="text-foreground/70 hover:text-neon-purple transition-colors text-sm uppercase tracking-wider font-light">
+            Tokenomics
           </a>
-          <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">
-            Contact
+          <a href="#roadmap" className="text-foreground/70 hover:text-neon-pink transition-colors text-sm uppercase tracking-wider font-light">
+            Roadmap
           </a>
         </nav>
 
-        <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-          Get Started
+        <Button className="bg-gradient-to-r from-neon-pink to-neon-purple text-white hover:opacity-90 transition-opacity border-0" style={{ boxShadow: 'var(--shadow-neon-pink)' }}>
+          Beta Access
         </Button>
       </div>
     </header>

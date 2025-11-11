@@ -47,13 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        bitcoin: {
-          orange: "hsl(var(--bitcoin-orange))",
+        neon: {
+          pink: "hsl(var(--neon-pink))",
+          purple: "hsl(var(--neon-purple))",
+          cyan: "hsl(var(--neon-cyan))",
         },
-        navy: {
-          dark: "hsl(var(--navy-dark))",
-          medium: "hsl(var(--navy-medium))",
-          light: "hsl(var(--navy-light))",
+        cyber: {
+          dark: "hsl(var(--cyber-dark))",
+          darker: "hsl(var(--cyber-darker))",
         },
       },
       borderRadius: {

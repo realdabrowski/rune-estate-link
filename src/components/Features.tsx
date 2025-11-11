@@ -1,71 +1,86 @@
-import { Shield, Zap, Lock, Globe, BarChart3, Coins } from "lucide-react";
-import { Card } from "@/components/ui/card";
+import { Home, TrendingUp, Briefcase, Users, DollarSign, Lock } from "lucide-react";
 
 const features = [
   {
-    icon: Shield,
-    title: "Bank-Grade Security",
-    description: "Built on Bitcoin's proven security infrastructure with multi-signature support and cold storage options.",
+    icon: Home,
+    title: "Real Estate",
+    description: "Tokenize properties for fractional ownership, rental yields, and global liquidity without traditional barriers.",
   },
   {
-    icon: Zap,
-    title: "Instant Settlement",
-    description: "Lightning-fast token transfers and settlements powered by Bitcoin's efficient UTXO model.",
+    icon: Users,
+    title: "Influencer Brands",
+    description: "Creators can tokenize their brand for fan engagement, revenue sharing, and exclusive content access.",
+  },
+  {
+    icon: Briefcase,
+    title: "Business Equity",
+    description: "Companies tokenize equity for crowdfunding, transparent governance, and decentralized ownership.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Global Trading",
+    description: "Trade tokens seamlessly on Bitcoin-compatible marketplaces like Magic Eden with instant settlement.",
+  },
+  {
+    icon: DollarSign,
+    title: "Low Fees",
+    description: "Only 1% tokenization fee payable in ESTR or BTC, eliminating expensive intermediaries.",
   },
   {
     icon: Lock,
-    title: "Full Custody Control",
-    description: "Maintain complete ownership of your assets with non-custodial wallet integration.",
-  },
-  {
-    icon: Globe,
-    title: "Global Accessibility",
-    description: "Access your tokenized assets from anywhere in the world, 24/7/365.",
-  },
-  {
-    icon: BarChart3,
-    title: "Real-Time Analytics",
-    description: "Track performance, monitor transactions, and analyze your portfolio in real-time.",
-  },
-  {
-    icon: Coins,
-    title: "Multi-Asset Support",
-    description: "Tokenize various asset classes from real estate to commodities and securities.",
+    title: "KYC/AML Compliant",
+    description: "Full regulatory compliance with SEC standards and secure document storage on IPFS.",
   },
 ];
 
 const Features = () => {
   return (
-    <section id="features" className="py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Powerful Features for{" "}
-            <span className="text-primary">Modern Tokenization</span>
+    <section id="technology" className="py-32 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-neon-pink/20 rounded-full blur-[150px]" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-bold mb-8">
+            <span className="bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan bg-clip-text text-transparent">
+              Use Cases
+            </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to tokenize, manage, and trade real-world assets 
-            on the most secure blockchain network.
+          <p className="text-xl text-foreground/70 max-w-3xl mx-auto font-light">
+            Democratizing access to high-value assets through blockchain tokenization
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card 
-              key={index} 
-              className="p-6 bg-card hover:bg-secondary/50 transition-all duration-300 border-border hover:border-primary/50 group"
-            >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <feature.icon className="w-6 h-6 text-primary" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {features.map((feature, index) => {
+            const colors = [
+              { border: 'neon-pink/30', hover: 'neon-pink', bg: 'neon-pink/10', text: 'neon-pink' },
+              { border: 'neon-purple/30', hover: 'neon-purple', bg: 'neon-purple/10', text: 'neon-purple' },
+              { border: 'neon-cyan/30', hover: 'neon-cyan', bg: 'neon-cyan/10', text: 'neon-cyan' },
+              { border: 'neon-pink/30', hover: 'neon-pink', bg: 'neon-pink/10', text: 'neon-pink' },
+              { border: 'neon-purple/30', hover: 'neon-purple', bg: 'neon-purple/10', text: 'neon-purple' },
+              { border: 'neon-cyan/30', hover: 'neon-cyan', bg: 'neon-cyan/10', text: 'neon-cyan' },
+            ];
+            const color = colors[index];
+            
+            return (
+              <div 
+                key={index} 
+                className={`p-8 bg-cyber-dark/50 border border-${color.border} rounded-lg backdrop-blur-sm hover:border-${color.hover} transition-all duration-300 group`}
+              >
+                <div className={`w-14 h-14 rounded-full bg-${color.bg} flex items-center justify-center mb-6`}>
+                  <feature.icon className={`w-7 h-7 text-${color.text}`} />
+                </div>
+                <h3 className={`text-lg font-semibold mb-3 text-${color.text} uppercase tracking-wider`}>
+                  {feature.title}
+                </h3>
+                <p className="text-foreground/70 font-light text-sm leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-foreground">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground">
-                {feature.description}
-              </p>
-            </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

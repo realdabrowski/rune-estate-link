@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutProtocol from "@/components/AboutProtocol";
-import Tokenomics from "@/components/Tokenomics";
 import Features from "@/components/Features";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
@@ -12,7 +11,6 @@ const Index = () => {
       <Header />
       <Hero />
       <AboutProtocol />
-      <Tokenomics />
       <Features />
       <CallToAction />
       <Footer />

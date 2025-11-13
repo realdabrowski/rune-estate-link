@@ -17,51 +17,42 @@ const Hero = () => {
             <span className="text-neon-cyan text-sm font-light uppercase tracking-widest">Rune ID: 902650:1531</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan bg-clip-text text-transparent" style={{ textShadow: 'var(--shadow-neon-pink)' }}>
+          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight tracking-tight">
+            <span className="bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan bg-clip-text text-transparent">
               Real World Assets
             </span>
           </h1>
           
-          <p className="text-2xl md:text-3xl text-neon-pink font-light mb-12 tracking-wide" style={{ textShadow: 'var(--shadow-neon-pink)' }}>
-            POWERED BY BITCOIN
+          <p className="text-sm md:text-base text-foreground/50 font-light mb-12 tracking-[0.3em] uppercase">
+            Powered by Bitcoin
           </p>
           
-          <p className="text-lg md:text-xl text-foreground/70 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-            Tokenize real estate, inheritances, valuables, and equity on Bitcoin blockchain. 
-            Democratizing access to high-value investments with unmatched security and transparency.
+          <p className="text-base md:text-lg text-foreground/50 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            Tokenize real estate, inheritances, valuables, and equity on Bitcoin blockchain.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-neon-pink to-neon-purple text-white hover:opacity-90 transition-opacity border-0 text-base uppercase tracking-wider group"
-              style={{ boxShadow: 'var(--shadow-neon-pink)' }}
-            >
-              Join Beta Testing
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-neon-cyan/50 bg-transparent text-neon-cyan hover:bg-neon-cyan/10 text-base uppercase tracking-wider"
+              className="bg-gradient-to-r from-neon-pink/80 to-neon-purple/80 text-white hover:opacity-80 transition-opacity border-0 text-sm tracking-wide group"
             >
               Download Whitepaper
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6 rounded-lg bg-cyber-dark/50 border border-neon-pink/20 backdrop-blur-sm">
-              <div className="text-4xl font-bold text-neon-pink mb-2" style={{ textShadow: 'var(--shadow-neon-pink)' }}>100M</div>
-              <div className="text-muted-foreground uppercase tracking-wide text-sm font-light">ESTR Tokens</div>
+          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-6 rounded-lg bg-cyber-dark/30 border border-border/50">
+              <div className="text-3xl font-light text-neon-pink mb-2">100M</div>
+              <div className="text-muted-foreground tracking-wider text-xs font-light">ESTR Tokens</div>
             </div>
-            <div className="text-center p-6 rounded-lg bg-cyber-dark/50 border border-neon-purple/20 backdrop-blur-sm">
-              <div className="text-4xl font-bold text-neon-purple mb-2" style={{ textShadow: 'var(--shadow-neon-purple)' }}>$3.7T</div>
-              <div className="text-muted-foreground uppercase tracking-wide text-sm font-light">Market Opportunity</div>
+            <div className="text-center p-6 rounded-lg bg-cyber-dark/30 border border-border/50">
+              <div className="text-3xl font-light text-neon-purple mb-2">$3.7T</div>
+              <div className="text-muted-foreground tracking-wider text-xs font-light">Market Opportunity</div>
             </div>
-            <div className="text-center p-6 rounded-lg bg-cyber-dark/50 border border-neon-cyan/20 backdrop-blur-sm">
-              <div className="text-4xl font-bold text-neon-cyan mb-2" style={{ textShadow: 'var(--shadow-neon-cyan)' }}>2025</div>
-              <div className="text-muted-foreground uppercase tracking-wide text-sm font-light">Launch Year</div>
+            <div className="text-center p-6 rounded-lg bg-cyber-dark/30 border border-border/50">
+              <div className="text-3xl font-light text-neon-cyan mb-2">2025</div>
+              <div className="text-muted-foreground tracking-wider text-xs font-light">Launch Year</div>
             </div>
           </div>
         </div>

@@ -57,33 +57,6 @@ const CallToAction = () => {
             </div>
           </div>
 
-          <div className="text-center p-12 rounded-lg bg-cyber-dark/50 border border-neon-pink/30 backdrop-blur-sm">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-neon-pink" style={{ textShadow: 'var(--shadow-neon-pink)' }}>
-              Join the Beta
-            </h3>
-            <p className="text-xl text-foreground/70 mb-10 font-light max-w-2xl mx-auto">
-              Be among the first to tokenize real-world assets on Bitcoin. 
-              Sign up for early access to the Estaterune platform.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-neon-pink to-neon-purple text-white hover:opacity-90 transition-opacity border-0 text-base uppercase tracking-wider group"
-                style={{ boxShadow: 'var(--shadow-neon-pink)' }}
-              >
-                Apply for Beta Access
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-2 border-neon-cyan/50 bg-transparent text-neon-cyan hover:bg-neon-cyan/10 text-base uppercase tracking-wider"
-              >
-                Read Whitepaper
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

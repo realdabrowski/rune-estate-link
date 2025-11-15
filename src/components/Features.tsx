@@ -24,7 +24,7 @@ const features = [
   {
     icon: DollarSign,
     title: "Low Fees",
-    description: "Only 1% tokenization fee payable in ESTR or BTC, eliminating expensive intermediaries.",
+    description: "Only 1% tokenization fee payable in BTC, eliminating expensive intermediaries.",
   },
   {
     icon: Lock,

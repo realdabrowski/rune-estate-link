@@ -39,7 +39,7 @@ const CallToAction = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-neon-purple mb-2 uppercase tracking-wider">Q1-Q2 2026</h3>
-                  <p className="text-foreground/70 font-light">Commercial asset onboarding • Seed funding round • ESTR governance via staking • Layer-2 DeFi integration</p>
+                  <p className="text-foreground/70 font-light">Commercial asset onboarding • Seed funding round • Layer-2 DeFi integration</p>
                 </div>
               </div>
             </div>

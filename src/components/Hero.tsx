@@ -35,17 +35,16 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-neon-pink/80 to-neon-purple/80 text-white hover:opacity-80 transition-opacity border-0 text-sm tracking-wide group"
+              asChild
             >
-              Download Whitepaper
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <a href="https://ipfs.io/ipfs/bafkreicqpukjmfl6atbnj2bvc33s2zel222sxmgc7t43xhwzmzcylmsa6q" target="_blank" rel="noopener noreferrer">
+                Download Whitepaper
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </div>
 
-          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6 rounded-lg bg-cyber-dark/30 border border-border/50">
-              <div className="text-3xl font-light text-neon-pink mb-2">100M</div>
-              <div className="text-muted-foreground tracking-wider text-xs font-light">ESTR Tokens</div>
-            </div>
+          <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <div className="text-center p-6 rounded-lg bg-cyber-dark/30 border border-border/50">
               <div className="text-3xl font-light text-neon-purple mb-2">$3.7T</div>
               <div className="text-muted-foreground tracking-wider text-xs font-light">Market Opportunity</div>

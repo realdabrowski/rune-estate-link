@@ -16,9 +16,6 @@ const Header = () => {
           <a href="#technology" className="text-foreground/70 hover:text-neon-cyan transition-colors text-sm uppercase tracking-wider font-light">
             Technology
           </a>
-          <a href="#tokenomics" className="text-foreground/70 hover:text-neon-purple transition-colors text-sm uppercase tracking-wider font-light">
-            Tokenomics
-          </a>
           <a href="#roadmap" className="text-foreground/70 hover:text-neon-pink transition-colors text-sm uppercase tracking-wider font-light">
             Roadmap
           </a>

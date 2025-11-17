@@ -2,37 +2,29 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recha
 import { Coins, Lock, Users, Rocket } from "lucide-react";
 
 const distributionData = [
-  { name: "Public Sale", value: 30, color: "hsl(328 100% 54%)" },
-  { name: "Liquidity Pool", value: 25, color: "hsl(280 88% 39%)" },
-  { name: "Team & Advisors", value: 15, color: "hsl(187 100% 50%)" },
-  { name: "Treasury", value: 20, color: "hsl(240 60% 50%)" },
-  { name: "Marketing", value: 10, color: "hsl(320 70% 60%)" },
+  { name: "Community/Investors", value: 50, color: "hsl(328 100% 54%)" },
+  { name: "Development", value: 30, color: "hsl(280 88% 39%)" },
+  { name: "Team", value: 20, color: "hsl(187 100% 50%)" },
 ];
 
 const utilities = [
   {
     icon: Coins,
-    title: "Transaction Fees",
-    description: "Reduced fees for ESTATERUNE holders on platform transactions",
+    title: "Tokenization Fees",
+    description: "Pay for property tokenization fees and platform services",
     color: "neon-pink",
   },
   {
-    icon: Lock,
-    title: "Staking Rewards",
-    description: "Earn passive income by staking tokens and supporting the network",
+    icon: Rocket,
+    title: "Premium Features",
+    description: "Access exclusive premium features and advanced analytics",
     color: "neon-purple",
   },
   {
     icon: Users,
-    title: "Governance Rights",
-    description: "Vote on protocol upgrades and investment decisions",
+    title: "Governance Staking",
+    description: "Stake tokens for governance rights and protocol decisions (future)",
     color: "neon-cyan",
-  },
-  {
-    icon: Rocket,
-    title: "Early Access",
-    description: "Priority access to new property tokenization opportunities",
-    color: "neon-pink",
   },
 ];
 
@@ -106,13 +98,13 @@ const Tokenomics = () => {
               <div className="space-y-6">
                 <div>
                   <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Total Supply</p>
-                  <p className="text-3xl font-bold text-foreground">1,000,000,000</p>
-                  <p className="text-xs text-muted-foreground mt-1">ESTATERUNE Tokens</p>
+                  <p className="text-3xl font-bold text-foreground">21,000,000</p>
+                  <p className="text-xs text-muted-foreground mt-1">ESTR Tokens (Fixed)</p>
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Circulating Supply</p>
-                  <p className="text-3xl font-bold text-neon-pink">300,000,000</p>
-                  <p className="text-xs text-muted-foreground mt-1">30% of Total Supply</p>
+                  <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Community/Investors</p>
+                  <p className="text-3xl font-bold text-neon-pink">10,500,000</p>
+                  <p className="text-xs text-muted-foreground mt-1">50% of Total Supply</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Rune ID</p>
@@ -121,8 +113,7 @@ const Tokenomics = () => {
                 <div className="pt-4 border-t border-border">
                   <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Vesting Schedule</p>
                   <p className="text-sm text-foreground/80 font-light leading-relaxed">
-                    Team tokens locked for 12 months with 24-month linear vesting. 
-                    Treasury releases controlled by DAO governance.
+                    Team allocation (20%) vested over 3 years to ensure long-term alignment and commitment to the project's success.
                   </p>
                 </div>
               </div>
@@ -133,7 +124,7 @@ const Tokenomics = () => {
         {/* Token Utility */}
         <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-neon-pink/30 p-8">
           <h3 className="text-2xl font-semibold mb-8 text-center text-neon-purple">Token Utility</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {utilities.map((utility, index) => {
               const Icon = utility.icon;
               return (

@@ -23,6 +23,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-neon-pink uppercase tracking-wider text-sm">Platform</h4>
             <ul className="space-y-3 text-sm">
               <li><a href="#technology" className="text-muted-foreground hover:text-neon-cyan transition-colors font-light">Technology</a></li>
+              <li><a href="#tokenomics" className="text-muted-foreground hover:text-neon-cyan transition-colors font-light">Tokenomics</a></li>
               <li><a href="#roadmap" className="text-muted-foreground hover:text-neon-cyan transition-colors font-light">Roadmap</a></li>
               <li><a href="https://www.estaterune.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-neon-cyan transition-colors font-light">Documentation</a></li>
             </ul>

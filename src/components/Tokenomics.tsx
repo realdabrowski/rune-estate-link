@@ -1,5 +1,6 @@
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
-import { Coins, Lock, Users, Rocket } from "lucide-react";
+import { Coins, Lock, Users, Rocket, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const distributionData = [
   { name: "Community/Investors", value: 50, color: "hsl(328 100% 54%)" },
@@ -145,6 +146,25 @@ const Tokenomics = () => {
               );
             })}
           </div>
+        </div>
+
+        {/* Magic Eden Button */}
+        <div className="mt-12 text-center">
+          <Button 
+            asChild
+            size="lg"
+            className="bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan hover:opacity-90 text-white font-semibold shadow-lg hover:shadow-neon-pink/50 transition-all"
+          >
+            <a 
+              href="https://magiceden.io/runes/ESTATERUNE" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2"
+            >
+              Explore ESTR Rune on Magic Eden
+              <ExternalLink className="h-5 w-5" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>

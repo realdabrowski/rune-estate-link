@@ -3,29 +3,37 @@ import { Coins, Lock, Users, Rocket, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const distributionData = [
-  { name: "Community/Investors", value: 50, color: "hsl(328 100% 54%)" },
-  { name: "Development", value: 30, color: "hsl(280 88% 39%)" },
-  { name: "Team", value: 20, color: "hsl(187 100% 50%)" },
+  { name: "Public Sale", value: 35, color: "hsl(328 100% 54%)" },
+  { name: "Treasury", value: 25, color: "hsl(280 88% 39%)" },
+  { name: "Community Growth", value: 15, color: "hsl(187 100% 50%)" },
+  { name: "Ecosystem Dev", value: 15, color: "hsl(142 76% 36%)" },
+  { name: "Team/Founders", value: 10, color: "hsl(47 96% 53%)" },
 ];
 
 const utilities = [
   {
     icon: Coins,
-    title: "Tokenization Fees",
-    description: "Pay for property tokenization fees and platform services",
+    title: "Fee Discounts",
+    description: "Holders get lower fees for tokenizing assets on Estaterune.com",
     color: "neon-pink",
   },
   {
-    icon: Rocket,
-    title: "Premium Features",
-    description: "Access exclusive premium features and advanced analytics",
+    icon: Users,
+    title: "Governance Rights",
+    description: "Vote on new asset categories, integrations, and platform roadmap",
     color: "neon-purple",
   },
   {
-    icon: Users,
-    title: "Governance Staking",
-    description: "Stake tokens for governance rights and protocol decisions (future)",
+    icon: Lock,
+    title: "Exclusive Membership",
+    description: "Access to whitelists, early mints, and exclusive content",
     color: "neon-cyan",
+  },
+  {
+    icon: Rocket,
+    title: "Ecosystem Priority",
+    description: "Priority access for future Runes drops and Estaterune launches",
+    color: "neon-pink",
   },
 ];
 
@@ -100,21 +108,25 @@ const Tokenomics = () => {
                 <div>
                   <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Total Supply</p>
                   <p className="text-3xl font-bold text-foreground">21,000,000</p>
-                  <p className="text-xs text-muted-foreground mt-1">ESTR Tokens (Fixed)</p>
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Community/Investors</p>
-                  <p className="text-3xl font-bold text-neon-pink">10,500,000</p>
-                  <p className="text-xs text-muted-foreground mt-1">50% of Total Supply</p>
+                  <p className="text-xs text-muted-foreground mt-1">EST Tokens (Fixed)</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Rune ID</p>
                   <p className="text-xl font-mono text-neon-purple">902650:1531</p>
                 </div>
                 <div className="pt-4 border-t border-border">
+                  <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Distribution Structure</p>
+                  <p className="text-sm text-foreground/80 font-light leading-relaxed mb-3">
+                    <span className="text-neon-pink font-semibold">Primary Slices:</span> 10 slices of 2.1M EST each for public sales, liquidity, and partnerships.
+                  </p>
+                  <p className="text-sm text-foreground/80 font-light leading-relaxed">
+                    <span className="text-neon-cyan font-semibold">Micro Slices:</span> 10 packs of 210k EST for giveaways, community rewards, and viral growth.
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-border">
                   <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wider">Vesting Schedule</p>
                   <p className="text-sm text-foreground/80 font-light leading-relaxed">
-                    Team allocation (20%) vested over 3 years to ensure long-term alignment and commitment to the project's success.
+                    Team/Founders allocation (10%) vested over 12-24 months to ensure long-term commitment.
                   </p>
                 </div>
               </div>
@@ -125,7 +137,7 @@ const Tokenomics = () => {
         {/* Token Utility */}
         <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-neon-pink/30 p-8">
           <h3 className="text-2xl font-semibold mb-8 text-center text-neon-purple">Token Utility</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {utilities.map((utility, index) => {
               const Icon = utility.icon;
               return (

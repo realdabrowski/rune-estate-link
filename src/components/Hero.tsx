@@ -13,6 +13,12 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10 pt-24">
         <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-[0.2em] uppercase">
+            <span className="bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink bg-clip-text text-transparent">
+              Estaterune
+            </span>
+          </h2>
+          
           <div className="inline-block mb-8 px-6 py-2 rounded-full bg-neon-purple/10 border border-neon-purple/30" style={{ boxShadow: 'var(--shadow-neon-purple)' }}>
             <span className="text-neon-cyan text-sm font-light uppercase tracking-widest">Rune ID: 902650:1531</span>
           </div>

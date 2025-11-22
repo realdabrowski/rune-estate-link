@@ -1,1 +1,4 @@
 project_id = "mmajsvtbgzqzizojolky"
+
+[functions.send-beta-request]
+verify_jwt = false

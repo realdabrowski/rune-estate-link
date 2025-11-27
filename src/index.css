@@ -55,6 +55,57 @@ All colors MUST be HSL.
   }
 }
 
+/* Logo Animations */
+@keyframes draw-path {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { 
+    opacity: 1; 
+    filter: drop-shadow(0 0 10px hsl(var(--neon-cyan) / 0.8)) drop-shadow(0 0 20px hsl(var(--neon-cyan) / 0.4)); 
+  }
+  20%, 24%, 55% { 
+    opacity: 0.7; 
+    filter: none; 
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: drop-shadow(0 0 5px hsl(var(--neon-pink) / 0.5)); }
+  50% { filter: drop-shadow(0 0 15px hsl(var(--neon-cyan) / 0.5)); }
+}
+
+@keyframes float-up {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-draw {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw-path 2.5s ease-out forwards;
+}
+
+.animate-neon-flicker { 
+  animation: neon-flicker 3s infinite alternate; 
+}
+
+.animate-pulse-glow { 
+  animation: pulse-glow 4s infinite ease-in-out; 
+}
+
+.animate-float-in { 
+  animation: float-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-1000 { animation-delay: 1000ms; }
+
 @layer base {
   * {
     @apply border-border;

@@ -13,11 +13,78 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10 pt-24">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-light mb-8 tracking-[0.2em] uppercase">
-            <span className="bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink bg-clip-text text-transparent">
-              Estaterune
-            </span>
-          </h2>
+          
+          {/* Animated Logo */}
+          <div className="mb-12 flex flex-col items-center justify-center animate-float-in">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 mb-8 animate-pulse-glow">
+              {/* Glow Backing */}
+              <div className="absolute inset-0 bg-gradient-to-b from-neon-pink/10 to-neon-cyan/10 blur-2xl rounded-2xl" />
+              
+              <svg viewBox="0 0 100 100" className="w-full h-full overflow-visible">
+                <defs>
+                  <linearGradient id="neonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style={{ stopColor: 'hsl(328 100% 54%)', stopOpacity: 1 }} />
+                    <stop offset="100%" style={{ stopColor: 'hsl(187 100% 50%)', stopOpacity: 1 }} />
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                
+                {/* Outer Box */}
+                <rect 
+                  x="5" y="5" width="90" height="90" rx="12" 
+                  fill="none" 
+                  stroke="url(#neonGrad)" 
+                  strokeWidth="2.5" 
+                  strokeLinecap="round" 
+                  className="animate-draw" 
+                  filter="url(#glow)" 
+                />
+                
+                {/* Rune R */}
+                <g filter="url(#glow)">
+                  {/* Vertical Spine */}
+                  <path 
+                    d="M 35 25 L 35 75" 
+                    fill="none" 
+                    stroke="url(#neonGrad)" 
+                    strokeWidth="2.5" 
+                    strokeLinecap="round" 
+                    className="animate-draw delay-300" 
+                  />
+                  {/* Top Triangle Loop */}
+                  <path 
+                    d="M 35 25 L 65 45 L 35 50" 
+                    fill="none" 
+                    stroke="url(#neonGrad)" 
+                    strokeWidth="2.5" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    className="animate-draw delay-500" 
+                  />
+                  {/* Bottom Leg */}
+                  <path 
+                    d="M 35 50 L 65 75" 
+                    fill="none" 
+                    stroke="url(#neonGrad)" 
+                    strokeWidth="2.5" 
+                    strokeLinecap="round" 
+                    className="animate-draw delay-700" 
+                  />
+                </g>
+              </svg>
+            </div>
+
+            {/* Animated Title */}
+            <h2 className="text-3xl md:text-5xl font-light mb-3 tracking-[0.2em] uppercase text-neon-cyan animate-neon-flicker delay-700">
+              ESTATERUNE
+            </h2>
+          </div>
           
           <div className="inline-block mb-8 px-6 py-2 rounded-full bg-neon-purple/10 border border-neon-purple/30" style={{ boxShadow: 'var(--shadow-neon-purple)' }}>
             <span className="text-neon-cyan text-sm font-light uppercase tracking-widest">Rune ID: 902650:1531</span>
